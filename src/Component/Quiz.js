@@ -75,7 +75,7 @@ function Quiz() {
   const CheckAnswer = (value) => {
     setTimeout(() => {
       if (currentQues.data.answer === value) {
-        setBgColor("light")
+       
         alert("your answer is correct");
         setScore((preValue) => preValue + 5);
         
@@ -87,7 +87,7 @@ function Quiz() {
         });
       } else {
         alert("your answer is incorrect");
-        setBgColor("dark")
+      
 
         setSubmition((preValue) => {
           preValue.push(true);
@@ -103,13 +103,13 @@ function Quiz() {
           s_no: preValue.s_no + 1
         };
       });
-    });
+    },1000);
   };
 
   const [score, setScore] = useState(0);
   const [submition, setSubmition] = useState([]);
   const [quizStatus, setQuizStatus] = useState(1);
-  const [bgcolor,setBgColor] =useState(false)
+
 
   return (
     <div className="Quiz-container">
@@ -121,7 +121,7 @@ function Quiz() {
           QestionNo={currentQues.s_no}
           totalQuestion={setData.length}
           CheckAnswer={CheckAnswer}
-          color={bgcolor}
+         
         />
       ) : (
         <div>Quize ended</div>

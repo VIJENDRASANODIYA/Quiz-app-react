@@ -9,7 +9,7 @@ function QuizQuestion({dataq,QestionNo,totalQuestion,CheckAnswer,color}){
       {/* <QuizOption value={"delhi"}/> */}
       {
         options.map((item,index)=>{
-          return <QuizOption value={item} key={index} CheckAnswer={CheckAnswer} color={color}/>
+          return <QuizOption value={item} key={index} CheckAnswer={CheckAnswer} />
           
         })
       }
